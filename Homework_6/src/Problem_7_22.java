@@ -1,5 +1,7 @@
 
-/*
+/* Problem 7.22
+ * Introduction to java programming by Y Daniel Liang
+ * 
  * (Game: Eight Queens) The classic Eight Queens puzzle is 
  * to place eight queens on a chess board such that no two 
  * queens can attack each other (i.e., no two queens are on 
