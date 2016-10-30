@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /*
  * Problem 7.6 
@@ -23,38 +24,48 @@ public class Problem_7_6 {
 	public static void main(String[] args) {
 		// Array for storing the prime numbers
 		int [] primeNumbers = new int[NUMBER_OF_PRIMES];
-		int count = 0;
+		int count = 0; // counter to track the array index
+		// find and place primes in array
 		for (int i = 2; count < NUMBER_OF_PRIMES; i++) {
 			if (checkForPrime(i)) {
 				primeNumbers[count] = i;
-				count++;
+				count++; // move to next array index
 			}
 		}
-
+		// call method for printing primes
 		printPrimes(primeNumbers);
 	}
 	// method for printing the prime numbers
 	private static void printPrimes(int[] array) {
 		for (int i = 0; i < array.length; i++) {
+			// used http://alvinalexander.com/programming/
+			// printf-format-cheat-sheet
+			// for formating information
 			System.out.printf("%5d", array[i]);
+			// create new line after every 10th number
 			if ((i + 1) % 10 == 0) {
 				System.out.println("");
 			}
 		}
 	}
+	// method for checking if number is prime
 	private static boolean checkForPrime(int number) {
 		for (int i = 2; i <= Math.sqrt(number); i++) {
 			if (number % i == 0) {
-				return false;
+				return false; // Returns false if not prime
 			}
 		}
-		return true;
+		return true; // Returns true if prime
 	}
 	// Ask for input to determine how many primes are found
 	// return that input
 	private static int numberOfPrimes() {
-
-		return 300;
+		/* Jason, would you mind writing this method?
+		 * It needs to ask the user to input how many prime
+		 * numbers they want to have found, and then return 
+		 * that number. Thanks!!
+		 */
+		return 50;
 	}	
 }
 
