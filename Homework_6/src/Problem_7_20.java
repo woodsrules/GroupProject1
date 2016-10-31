@@ -13,10 +13,52 @@
  * numbers.
  */
 
+import java.util.Scanner;
+
 public class Problem_7_20 {
-
+	// The key to the battleship
 	public static void main(String[] args) {
-
+		selectionSort(getListOfNumbers());
 	}
-
+	// Method for getting user input for making array
+	private static double[] getListOfNumbers () {
+		// initializes scanner
+		Scanner input = new Scanner(System.in);
+		// ask how many numbers will be sorted
+		System.out.println("How many numbers would you like" +
+				" to sort?");
+		// set size of array to be sorted
+		double[] listOfNumbers = new double[input.nextInt()];
+		// ask for numbers to be sorted
+		System.out.print("Please enter the numbers that " +
+				"you would like to sort,\nmaking sure " +
+				"to press enter after each number.");
+		// set user input to the array
+		for (int i = 0; i < listOfNumbers.length; i++) {
+			listOfNumbers[i] = input.nextDouble();
+		}	
+		return listOfNumbers; // return the new array
+	}
+	// Method for sorting the array in descending order
+	// code modified from listing 7.8
+	private static void selectionSort (double[] array) {
+		// find the max in the list
+		for (int i = 0; i < array.length - 1; i++) {
+			double currentMax = array[i];
+			int currentMaxIndex = i;
+			for (int j = i + 1; j < array.length - 1; j++) {
+				if (currentMax < array[j]) {
+					currentMax = array[j];
+					currentMaxIndex = j;
+				}
+			}
+			if (currentMaxIndex != i) {
+				array[currentMaxIndex] = array [i];
+				array[i] = currentMax;
+			}
+		}
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+	}
 }
