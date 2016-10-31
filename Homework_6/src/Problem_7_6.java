@@ -68,19 +68,10 @@ public class Problem_7_6 {
 	// Ask for input to determine how many primes are found
 	// return that input
 	private static int numberOfPrimes() {
-		/* Jason, would you mind writing this method?
-		 * It needs to ask the user to input how many prime
-		 * numbers they want to have found, and then return 
-		 * that number. Thanks!!
-		 * Yes i will. -Jason
-		 * 
-		 * edit: If this doesnt work i'm sorry i cant run it currently.
-		 *  I tried. Don't hate me.
-		 */
-		System.out.print("How many prime numbers do you want, bruh? ");
-		int howManyPrimes = input.nextInt;
-		System.out.print("Your prime numbers are: " + i);
-		return 50;
+		Scanner input = new Scanner(System.in);
+		System.out.print("How many prime numbers do you " +
+				"want, bruh? ");
+		return input.nextInt();
 	}	
 }
 
