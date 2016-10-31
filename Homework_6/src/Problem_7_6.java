@@ -73,6 +73,9 @@ public class Problem_7_6 {
 		 * numbers they want to have found, and then return 
 		 * that number. Thanks!!
 		 * Yes i will. -Jason
+		 * 
+		 * edit: If this doesnt work i'm sorry i cant run it currently.
+		 *  I tried. Don't hate me.
 		 */
 		System.out.print("How many prime numbers do you want, bruh? ");
 		int howManyPrimes = input.nextInt;
