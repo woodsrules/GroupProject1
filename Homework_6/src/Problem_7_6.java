@@ -15,9 +15,10 @@
  * array to store the prime numbers and later use them to 
  * check whether they are possible divisors for n.
  */
+import java.util.Scanner;
 
 public class Problem_7_6 {
-	
+	Scanner input = new Scanner(System.in);
 	// Some code was pulled from listing 5.15
 	final static int NUMBER_OF_PRIMES = numberOfPrimes();
 	// Array for storing the prime numbers
@@ -71,7 +72,11 @@ public class Problem_7_6 {
 		 * It needs to ask the user to input how many prime
 		 * numbers they want to have found, and then return 
 		 * that number. Thanks!!
+		 * Yes i will. -Jason
 		 */
+		System.out.print("How many prime numbers do you want, bruh? ");
+		int howManyPrimes = input.nextInt;
+		System.out.print("Your prime numbers are: " + i);
 		return 50;
 	}	
 }
