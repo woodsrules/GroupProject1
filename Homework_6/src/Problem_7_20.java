@@ -18,7 +18,13 @@ import java.util.Scanner;
 public class Problem_7_20 {
 	// The key to the battleship
 	public static void main(String[] args) {
-		selectionSort(getListOfNumbers());
+		printSortedList(selectionSort(getListOfNumbers()));
+	}
+	private static void printSortedList(double[] array) {
+		for (int i = 0; i < array.length - 1; i++) {
+			System.out.print(array[i] + " > ");
+		}
+		System.out.print(array[array.length - 1]);
 	}
 	// Method for getting user input for making array
 	private static double[] getListOfNumbers () {
@@ -41,12 +47,12 @@ public class Problem_7_20 {
 	}
 	// Method for sorting the array in descending order
 	// code modified from listing 7.8
-	private static void selectionSort (double[] array) {
+	private static double[] selectionSort (double[] array) {
 		// find the max in the list
 		for (int i = 0; i < array.length - 1; i++) {
 			double currentMax = array[i];
 			int currentMaxIndex = i;
-			for (int j = i + 1; j < array.length - 1; j++) {
+			for (int j = i + 1; j < array.length; j++) {
 				if (currentMax < array[j]) {
 					currentMax = array[j];
 					currentMaxIndex = j;
@@ -57,8 +63,6 @@ public class Problem_7_20 {
 				array[i] = currentMax;
 			}
 		}
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");
-		}
+		return array;
 	}
 }
